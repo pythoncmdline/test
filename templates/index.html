@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis Grade Scraper</title>
+</head>
+<body>
+    <h1>Genesis Grade Scraper</h1>
+    <form method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Scrape Grades</button>
+    </form>
+
+    {% if grades %}
+    <h2>Your Grades:</h2>
+    <ul>
+        {% for grade in grades %}
+        <li>{{ grade }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
